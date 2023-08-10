@@ -1,5 +1,5 @@
 <?php
-include 'common/connection.php';
+include '/wamp/www/as2/common/connection.php';
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

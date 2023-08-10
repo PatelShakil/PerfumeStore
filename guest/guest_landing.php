@@ -26,10 +26,10 @@
                 <h2>Welcome to Motala Perfumes</h2>
                 <p>Create an account to get started!</p>
             </div>
-            <form action="signup.php" method="post">
+            <form action="/as2/auth/signup.php" method="post">
                 <div class="form-group">
                     <label for="phone">Phone No.</label>
-                    <input type="phone" class="form-control" id="email" name="email" required>
+                    <input type="phone" class="form-control" id="email" name="phoneNo" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
