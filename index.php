@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    header("Location: guest/guest_landing.php")
+    header("Location: common/home.php")
     ?>
 </body>
 </html>
