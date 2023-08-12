@@ -1,17 +1,19 @@
 <?php
 include '/wamp/www/as2/common/header.php'; 
 ?>
+
 <style>
   .product-card {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
+    /* height: 400px; */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   .product-image {
+    width: 100%;
     height: 250px;
-    width: fit-content;
-    /* background: url('perfume-image.jpg') center/cover no-repeat; */
+    background: center/cover no-repeat;
   }
   .product-details {
     padding: 15px;
@@ -47,14 +49,17 @@ include '/wamp/www/as2/common/header.php';
 <body>
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md">
       <div class="product-card">
-        <img src="<?php echo $product_img ?>" class="product-image">
+        <img class="product-image" src="<?php echo $product_img?>"/>
         <div class="product-details">
           <h3 class="product-title"><?php echo $product_title ?></h3>
-          <p class="product-description"><?php echo $product_description ?></p>
-          <p class="product-price"><?php echo $product_price ?></p>
-          <button class="buy-button">Add to Cart</button>
+          <details>
+                      <summary><?php echo substr($product_description,0,20) ?></summary>
+                      <p class="product-description"><?php echo substr($product_description,20) ?></p>
+          </details>
+          <!-- <p class="product-price"><?php echo $product_price ?></p> -->
+          <button class="buy-button" >Add to Cart</button>
         </div>
       </div>
     </div>
