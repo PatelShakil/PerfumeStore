@@ -19,7 +19,7 @@ include '/wamp/www/as2/common/connection.php';
 <body>
     <div class="row d-flex align-items-center">
     <div class="registration-button"></div>
-    <p style="text-align : center; align-items:center; padding-top : 35px; padding-left:20px;">Click here to Register on Motala Perfumes</p>
+    <p style="text-align : center; align-items:center; padding-top : 35px; padding-left:20px;">Click <a href="/as2/auth/signup_ui.php">here</a> to Register on Motala Perfumes</p>
     </div>
     <div class="container">
         <div class="row">

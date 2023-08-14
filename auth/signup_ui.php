@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Welcome to Our Website</title>
     <!-- Include Bootstrap CSS -->
@@ -8,10 +9,12 @@
         body {
             background-color: #f4f4f4;
         }
+
         .container {
             max-width: 400px;
             margin-top: 100px;
         }
+
         .card {
             border: none;
             border-radius: 10px;
@@ -19,6 +22,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="card p-4">
@@ -29,15 +33,23 @@
             <form action="/as2/auth/signup.php" method="post">
                 <div class="form-group">
                     <label for="phone">Phone No.</label>
-                    <input type="phone" class="form-control" id="email" name="phoneNo" required>
+                    <input type="phone" class="form-control" id="number" name="phoneNo" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="cars">Choose position</label>
+                    <select name="position" class="form-control" id="position">
+                        <option value="customer">Customer</option>
+                        <option value="admin">Admin</option>
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
             </form>
         </div>
     </div>
 </body>
+
 </html>
