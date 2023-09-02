@@ -1,6 +1,10 @@
 <?php
 include '/wamp/www/as2/common/header.php';
 include '/wamp/www/as2/common/connection.php';
+session_start();
+if($_SESSION['curUserId'] != null){
+    echo $_SESSION['curUserId'];
+}
 ?>
 <style>
     .registration-button{

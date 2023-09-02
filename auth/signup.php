@@ -6,15 +6,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phoneNo = $_POST["phoneNo"];
     $password = $_POST["password"];
     $position = $_POST["position"];
-    if($position == "customer") 
-    $table = "customer"; 
-    else 
-    $table = "admin";
 
     // Insert data into the database
-    $sql = "INSERT INTO " .$table . "(phoneno, password) VALUES ('$phoneNo', '$password')";
+
+    $curUserSql = "SELECT id FROM users WHERE phoneno = '$phoneNo';";
+    $sql = "INSERT INTO users(phoneno, password,type) VALUES ('$phoneNo', '$password','$position')";
     if ($conn->query($sql) === TRUE) {
-        echo "Account created successfully!";
+        session_reset();
+        $_SESSION['curUserId'] = $conn->query($curUserSql)->fetch_row()[0];
+        header("Location: home.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -22,10 +22,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Close the database connection
 $conn->close();
-?>
-
-
-
-
-
 ?>
